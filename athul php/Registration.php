@@ -1,0 +1,89 @@
+<?php include('server.php');?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>REGISTRATION </title><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <style type="text/css">
+    body{
+      background-color: rgb(255,255,0);
+    }
+    .container{
+      background-color: whitesmoke;
+    }
+  </style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"><img src="FAMILY.jpg" class="rounded float-left" alt="..." width="90px"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="Gallery.php">GALLERY</a>
+      <a class="nav-item nav-link" href="#">CONTACT</a>
+      <a class="nav-item nav-link" href="#">REFERENCE</a>
+    </div>
+  </div>
+  <form class="form-inline my-2 my-lg-0">
+  	<img src="https://img.icons8.com/android/48/000000/home.png">
+    </form>
+</nav><br></br>
+	<div class="container">
+		<div class="jumbotron">
+	<form action="Registration.php" method="post">
+		<?php include('errors.php');?>
+  <div class="form-group">
+    <div class="row">
+    <div class="col">
+      <input type="text" name="first" class="form-control" placeholder="First name">
+    </div>
+    <div class="col">
+      <input type="text" name="last"  class="form-control" placeholder="Last name">
+    </div>
+  </div>
+  </div>
+  <div class="form-group">
+   <div class="form-group col-md-6">
+      <label for="inputEmail4">Email</label>
+      <input type="email" name="user"  class="form-control" id="inputEmail4">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Password</label>
+      <input type="password" name="pass" class="form-control" id="inputPassword4">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Address</label>
+    <input type="text" class="form-control" name="address" id="inputAddress" placeholder="1234 Main St">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">City</label>
+      <input type="text" class="form-control" name="city" id="inputCity">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">State</label>
+      <select id="inputState" class="form-control" name="state">
+        <option selected>Choose...</option>
+        <option>Kerala</option>
+        <option>TamilNadu</option>
+        <option>Karnataka</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputZip">Zip</label>
+      <input type="text" class="form-control" name="zip" id="inputZip">
+    </div>
+  </div>
+  </div>
+    <div class="alert alert-success">
+  <button type="submit" name="register" class="btn btn-primary" >Sign in</button></div>
+</form>
+  
+</div>
+</form>
+</body>
+</html>
